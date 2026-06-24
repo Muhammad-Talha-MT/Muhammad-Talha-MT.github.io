@@ -2,14 +2,20 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+title: Muhammad Talha
+first_name: Muhammad
+middle_name:
+last_name: Talha
+
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Feel free to contact me regarding research collaborations,
+  academic opportunities, or machine learning for environmental science.
+
+description: >
+  Academic portfolio of Muhammad Talha, a Ph.D. researcher working on
+  machine learning, computer vision, hydroinformatics, spatiotemporal
+  modeling, and scientific artificial intelligence.
+
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -341,8 +347,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Talha]
+  first_name: [Muhammad]
 
   style: apa
   locale: en
