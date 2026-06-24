@@ -1,14 +1,9 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Muhammad-Talha-MT
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Muhammad-Talha-MT/HydroTransformer
+  - Muhammad-Talha-MT/watershed-agnostic-streamflow-estimation
+  - Muhammad-Talha-MT/another-repository
