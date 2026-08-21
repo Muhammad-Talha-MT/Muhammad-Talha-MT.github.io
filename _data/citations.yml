@@ -1,10 +1,6 @@
 metadata:
-  last_updated: '2026-08-07'
+  last_updated: '2026-08-21'
 papers:
-  MA_9bCQAAAAJ:3fE2CSJIrl8C:
-    citations: 0
-    title: 'BASINGRID: A distributed 40-year spatiotemporal hydrology dataset for U.S. basins'
-    year: '2026'
   MA_9bCQAAAAJ:9yKSN-GCB0IC:
     citations: 18
     title: 'Soft computing paradigm for climate change adaptation and mitigation in Iran, Pakistan, and Turkey: A systematic review'
@@ -17,6 +13,10 @@ papers:
     citations: 11
     title: Unveiling the resilience of smallholder farmers in Senegal amidst extreme climate conditions
     year: '2024'
+  MA_9bCQAAAAJ:kNdYIx-mwKoC:
+    citations: 0
+    title: 'BASINGRID: A distributed 40-year spatiotemporal hydrology dataset for US basins'
+    year: '2026'
   MA_9bCQAAAAJ:u-x6o8ySG0sC:
     citations: 8
     title: Transferable Learning Architecture for Scalable Visual Quality Inspection
