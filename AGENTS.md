@@ -1,56 +1,27 @@
-# Agent Guidelines for al-folio (v1.x)
+# Agent Guidelines
 
-`al-folio` is the **starter repo** for the pluginized v1 architecture.
+Personal academic website of Muhammad Talha, built with Jekyll and a **custom theme that lives in this repo**. It no longer uses the al-folio theme or its plugin gems.
 
-## Read This First
+## Layout of the repo
 
-- Start with `.github/copilot-instructions.md` for architecture, ownership boundaries, and CI expectations.
-- Use `docs/BOUNDARIES.md` as the source of truth for starter-vs-plugin ownership.
-- Use `.agents/skills/al-folio-bootstrap/SKILL.md` for new-site setup tasks.
-- Use `.agents/skills/al-folio-v1-migration/SKILL.md` for customized fork migrations.
-- `.codex/skills` and `.claude/skills` are symlinks to `.agents/skills` for agent-specific discovery.
+- `_layouts/`: `default` (shell), `home` (landing page), `page`, `project`, `bib` (one publication entry, used by jekyll-scholar)
+- `_includes/`: header, footer, `icon` (inline SVG icons), project card, lists
+- `assets/css/site.css`: all styles; plain CSS with custom properties, light/dark themes, no build step
+- `assets/js/site.js`: theme toggle, menu, reveal-on-scroll, publication filters, BibTeX copy, live GitHub stats
+- `assets/img/research/`: project images (public-domain NASA Earth Observatory imagery, credited on each project page), visual-inspection notebook outputs, and the home-page background map (from the Basin2Vec repo)
+- Content: `_pages/`, `_projects/` (front matter drives cards: `image`, optional `card_image`, `image_alt`, `image_credit`, `figures`, `status`, `tags`, `links`, `publications`, `featured`), `_news/`, `_bibliography/papers.bib`
+- Data: `_data/cv.yml` (CV page), `_data/research.yml` (home themes and pipeline), `_data/repositories.yml` (Code page), `_data/socials.yml`, `_data/citations.yml` (updated by the citations workflow)
 
-## What This Repo Owns
-
-- Starter wiring (`Gemfile`, `_config.yml`)
-- Starter content and documentation
-- Cross-plugin integration tests
-- Visual regression tests
-
-Runtime/component logic belongs in owning plugin repos (`al_folio_core`, `al_folio_distill`, `al_search`, `al_icons`, `al_cookie`, and other `al-*` gems).
-Long-form documentation lives in `docs/`; keep this root file as the short discovery entry point for coding agents.
-
-## Validated Local Command Set
-
-Run from repo root:
+## Commands
 
 ```bash
-npm ci
-npm run lint:prettier
-npm run lint:style-contract
-bundle exec jekyll build --baseurl /al-folio
-bash test/integration_comments.sh
-bash test/integration_plugin_toggles.sh
-bash test/integration_distill.sh
-bash test/integration_bootstrap_compat.sh
-bash test/integration_upgrade_cli.sh
-npx playwright install chromium webkit
-npm run test:visual
-bundle exec al-folio upgrade audit
-bundle exec al-folio upgrade overrides audit
-bundle exec al-folio upgrade report
-docker compose up -d
-curl -fsS http://127.0.0.1:8080/al-folio/ >/dev/null
-docker compose logs --tail=80
-docker compose down
+bundle install
+bundle exec jekyll serve          # http://localhost:4000
+bundle exec jekyll build
+npm ci && npm run lint:prettier
 ```
 
-Docker note: v1 uses `/srv/jekyll/bin/entry_point.sh` and serves from container-local `/tmp/_site` to avoid host bind-mount write deadlocks.
+## Notes
 
-## Agent Routing Rules
-
-- If change is starter wiring/docs/integration/visual testing: edit here.
-- If change is runtime feature behavior: route to owning plugin repo.
-- Do not add starter-local npm build scripts for theme/runtime assets.
-- Keep docs aligned with pluginized v1 ownership.
-- If you create or keep local overrides of plugin-owned files, run `bundle exec al-folio upgrade overrides audit` and commit `.al-folio-overrides.yml` after review.
+- Files from the old al-folio starter (`_posts/`, `test/`, `docs/`, Docker files, several workflows) are still in the repo but excluded from the build in `_config.yml`.
+- Keep colors in the CSS custom properties at the top of `site.css`. The hero map is a white-on-black figure; `--map-filter`/`--map-blend` invert it for the light theme.

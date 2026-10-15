@@ -1,0 +1,29 @@
+{%- assign p = include.project -%}
+<article class="project-card reveal{% unless p.image %} project-card--text{% endunless %}">
+  {% if p.image %}
+    <a class="project-card-media" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ p.card_image | default: p.image | relative_url }}" alt="" loading="lazy">
+    </a>
+  {% endif %}
+  <div class="project-card-body">
+    <h3 class="project-card-title">
+      <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+    </h3>
+    <p class="project-card-meta">
+      {%- if p.status -%}
+        <span class="status status--{{ p.status | slugify }}">{{ p.status }}</span> ·
+      {% endif -%}
+      {{ p.period }}
+    </p>
+    <p class="project-card-text">{{ p.description }}</p>
+    <p class="project-card-links">
+      <a href="{{ p.url | relative_url }}">details {% include icon.liquid name="arrow-right" %}</a>
+      {% for l in p.links %}
+        <a href="{{ l.url }}">
+          {{- l.label | downcase }}
+          {% include icon.liquid name="external" -%}
+        </a>
+      {% endfor %}
+    </p>
+  </div>
+</article>

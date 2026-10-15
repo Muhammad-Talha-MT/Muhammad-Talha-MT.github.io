@@ -1,0 +1,8 @@
+{%- assign d = include.d | append: '' -%}
+{%- if d == 'present' -%}
+  Present
+{%- elsif d.size == 7 -%}
+  {{- d | append: '-01' | date: '%b %Y' -}}
+{%- else -%}
+  {{- d -}}
+{%- endif -%}

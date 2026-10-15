@@ -1,0 +1,42 @@
+# Research themes shown on the home page.
+
+themes:
+  - num: "01"
+    title: Foundation models for Earth systems
+    text: >-
+      Multimodal pretraining that fuses gauge observations, gridded meteorology, landscape attributes, and
+      National Water Model simulations into one model for continental-scale hydrologic prediction.
+    projects:
+      - title: HydroORBIT
+        url: /projects/1_hydroorbit/
+
+  - num: "02"
+    title: Graph learning on river networks
+    text: >-
+      Graph neural networks that pass information along upstream–downstream connectivity, so predictions
+      respect how water actually routes through a basin.
+    projects:
+      - title: GNNs for distributed streamflow
+        url: /projects/2_gnn_streamflow/
+
+  - num: "03"
+    title: Spatiotemporal deep learning
+    text: >-
+      Transformers and CNN–LSTMs that read distributed, gridded inputs directly instead of basin averages, and
+      that generalize to new places and new time periods.
+    projects:
+      - title: HydroTransformer
+        url: /projects/3_hydrotransformer/
+      - title: Watershed-agnostic model
+        url: /projects/6_watershed_agnostic/
+
+  - num: "04"
+    title: Transferable basin representations
+    text: >-
+      Embeddings and large aligned datasets that let models trained on gauged basins make predictions in basins
+      they have never seen.
+    projects:
+      - title: Basin2Vec
+        url: /projects/4_basin2vec/
+      - title: BASINGRID
+        url: /projects/5_basingrid/

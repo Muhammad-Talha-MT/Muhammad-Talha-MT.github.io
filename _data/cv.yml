@@ -1,189 +1,169 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Muhammad Talha
+  label: Ph.D. Candidate, Computer Science & Biosystems and Agricultural Engineering
+  email: talhamuh@msu.edu
+  location: Oak Ridge, Tennessee
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >-
+    Dual-major Ph.D. candidate developing AI for Earth-system prediction through multimodal foundation models,
+    graph neural networks, spatiotemporal transformers, and transferable representations. At Oak Ridge National
+    Laboratory, contributing to the Genesis-funded HydroORBIT project and graph-based hydrologic modeling.
+    Experience integrating environmental observations, geospatial attributes, and numerical-model simulations.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: Muhammad-Talha-MT
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: mt-muhammad-talha
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Michigan State University
+        location: East Lansing, Michigan
+        url: https://msu.edu/
+        area: Computer Science & Biosystems and Agricultural Engineering (dual major)
+        studyType: Ph.D.
+        start_date: 2023-01
+        end_date: present
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Dissertation: Spatially Distributed Basin Representations for Hydrologic Prediction Across Space and Time."
+          - "Advisors: [Dr. Amirpouyan Nejadhashemi](https://www.egr.msu.edu/people/profile/pouyan) and [Dr. Pang-Ning Tan](https://www.cse.msu.edu/~ptan/)."
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: University of Engineering and Technology, Lahore
+        location: Lahore, Pakistan
+        area: Computer Science
+        studyType: B.S.
+        start_date: 2017-08
+        end_date: 2021-06
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Oak Ridge National Laboratory
+        position: Research Intern, Graduate Research Opportunity (GRO) Program
+        location: Oak Ridge, Tennessee
+        start_date: 2026-08
+        end_date: present
+        summary: "Mentor: [Dr. Dan Lu](https://www.ornl.gov/staff-profile/dan-lu)"
         highlights:
-          - Relativity
-          - Description 2.
+          - Contributing to HydroORBIT, a Genesis-funded multimodal foundation model for continental-scale hydrologic prediction, integrating environmental observations and simulations.
+          - Developing graph neural networks for distributed streamflow prediction using river-network connectivity, NWM pretraining, and gauge observations, with benchmarking against neural models and TVA forecasts.
+          - Building aligned multimodal datasets from gridded fields, basin attributes, and gauge time series, including point-cloud representations for spatial and temporal synchronization.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Michigan State University
+        position: Graduate Research Assistant
+        location: East Lansing, Michigan
+        start_date: 2023-01
+        end_date: 2026-07
+        summary: "Advisors: [Dr. Amirpouyan Nejadhashemi](https://www.egr.msu.edu/people/profile/pouyan) and [Dr. Pang-Ning Tan](https://www.cse.msu.edu/~ptan/)"
         highlights:
-          - Description 1.
-          - Description 2.
+          - Developed HydroTransformer and an explainable watershed-agnostic CNN–LSTM for streamflow prediction from distributed inputs, evaluating generalization across space and time.
+          - Developed Basin2Vec, a basin-centric representation-learning framework for transferable hydrologic prediction in previously unseen basins.
+          - Created BASINGRID, a 40-year (1985–2024) dataset of aligned meteorological and landscape rasters covering 9,067 U.S. basins.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Ibex (TRG)
+        position: Machine Learning Engineer
+        start_date: 2021-06
+        end_date: 2022-12
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - Developed a real-time compliance system processing over 20,000 agent screen recordings using CNN-based form detection and OCR-based information extraction.
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+      - title: "Basin2Vec: Learning Basin-Centric Embeddings for Scalable Hydrological Modeling"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Muhammad Talha
+          - Xiaofeng Liu
+          - Yuan Yang
+          - Pang-Ning Tan
+          - A. Pouyan Nejadhashemi
+        publisher: IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2027)
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: "BASINGRID: A distributed 40-year spatiotemporal hydrology dataset for U.S. basins"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - Muhammad Talha
+          - A. Pouyan Nejadhashemi
+          - Xiaofeng Liu
+          - Yuan Yang
+        publisher: Scientific Data
+        releaseDate: 2026-08-06
+        url: https://doi.org/10.1038/s41597-026-08030-4
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
+      - title: "Watershed-agnostic modeling: An explainable, distributed, data-driven hydrologic model"
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+          - Muhammad Talha
+          - A. Pouyan Nejadhashemi
+        publisher: Environmental Modelling & Software
+        releaseDate: 2026-10-01
+        url: https://doi.org/10.1016/j.envsoft.2026.107149
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - title: "Soft computing paradigm for climate change adaptation and mitigation in Iran, Pakistan, and Turkey: A systematic review"
+        authors:
+          - Muhammad Talha
+          - A. Pouyan Nejadhashemi
+          - Kieron Moller
+        publisher: Heliyon
+        releaseDate: 2025-01-01
+        url: https://doi.org/10.1016/j.heliyon.2025.e41974
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - title: Unveiling the resilience of smallholder farmers in Senegal amidst extreme climate conditions
+        authors:
+          - Kieron Moller
+          - A. Pouyan Nejadhashemi
+          - Muhammad Talha
+        publisher: Food and Energy Security
+        releaseDate: 2024-01-01
+        url: https://doi.org/10.1002/fes3.523
 
-      - name: English
-        summary: "Fluent"
+      - title: Transferable Learning Architecture for Scalable Visual Quality Inspection
+        authors:
+          - Muhammad Talha
+          - Sheikh Faisal
+          - Zain Iftikhar
+          - M. Touseef Afzal
+        publisher: International Conference on Artificial Intelligence (ICAI)
+        releaseDate: 2022-03-30
+        url: https://doi.org/10.1109/ICAI55435.2022.9773637
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - title: Multimodal Foundation Priors for Diffusion-Calibrated Zero-Shot Time Series Reconstruction
+        authors:
+          - Yingda Fan
+          - Muhammad Talha
+          - Vinh Ngoc Tran
+          - Chonghao Qiu
+          - Xi Xiao
+          - Xiaowei Jia
+          - Dan Lu
+        publisher: Under review, International Conference on Learning Representations (ICLR)
 
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+      - title: "From Aggregated to Distributed: A Transformer Framework for Generalizable Streamflow Modeling Across Space and Time"
+        authors:
+          - Muhammad Talha
+          - A. Pouyan Nejadhashemi
+          - Xiaofeng Liu
+        publisher: Under review, Engineering Applications of Artificial Intelligence
 
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+      - name: Multi-objective Optimization for Smallholder Farmers
+        summary: Michigan State University. Applied linear and multi-objective optimization using SciPy and pymoo (NSGA-II), ranking solutions by cost-effectiveness and nutritional balance.
+        start_date: 2023-06
+        end_date: 2024-01
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    Awards:
+      - title: Graduate Research Opportunity (GRO) Program
+        awarder: Oak Ridge National Laboratory
+        date: 2026
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - title: M. Kent Taylor Graduate Assistantship
+        awarder: Michigan State University
+        date: 2025
+
+    Skills:
+      - name: AI and scientific modeling
+        icon: fa-solid fa-brain
+        keywords: "Transformers, graph neural networks, CNNs and LSTMs, multimodal feature fusion, representation and transfer learning, foundation-model development, spatiotemporal forecasting, model benchmarking and interpretability"
+
+      - name: Scientific data
+        icon: fa-solid fa-water
+        keywords: "Hydrometeorological observations and NWM simulations, geospatial alignment, raster and river-network processing, NetCDF, HDF5, Zarr, GDAL, Rasterio, GeoPandas"
+
+      - name: Computing and software
+        icon: fa-solid fa-code
+        keywords: "Python, PyTorch, TensorFlow, MATLAB, C++, C#, SQL, JavaScript, Linux, Git, Slurm, GPU computing, PSC Bridges-2, Frontier"

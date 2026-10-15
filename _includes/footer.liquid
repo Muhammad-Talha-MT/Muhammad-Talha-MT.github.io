@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-text"
+          ><span class="brand-name">{{ site.author.name }}</span></span
+        >
+      </a>
+      <p>
+        {{ site.author.role -}}
+        <br>
+        {{ site.author.affiliation }}
+      </p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        {% for item in site.nav %}
+          <li>
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% include social-links.liquid class="social-links--footer" %}
+  </div>
+  <div class="wrap footer-meta">
+    <span
+      >&copy; {{ site.time | date: '%Y' }}
+      {{ site.author.name -}}
+    </span>
+    <span>Last updated {{ site.time | date: '%B %-d, %Y' }}</span>
+  </div>
+</footer>

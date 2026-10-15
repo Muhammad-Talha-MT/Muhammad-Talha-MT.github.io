@@ -1,9 +1,43 @@
-github_users:
-  - Muhammad-Talha-MT
+# Repositories shown on the Code page. Star counts and "updated" dates are fetched live from the GitHub API.
+github_user: Muhammad-Talha-MT
 
-repo_description_lines_max: 2
-
-github_repos:
-  - Muhammad-Talha-MT/HydroTransformer
-  - Muhammad-Talha-MT/watershed-agnostic-streamflow-estimation
-  - Muhammad-Talha-MT/another-repository
+groups:
+  - title: Research code
+    repos:
+      - name: HydroTransformer
+        description: Transformer framework for generalizable streamflow modeling across space and time from distributed inputs.
+        language: Python
+        project: /projects/3_hydrotransformer/
+      - name: basin2vec
+        title: Basin2Vec
+        description: Basin-centric embeddings for transferable hydrologic prediction in unseen basins (WACV 2027).
+        language: Jupyter
+        project: /projects/4_basin2vec/
+      - name: BasinGrid
+        title: BASINGRID
+        description: Pipeline for the 40-year distributed hydrology dataset of 9,067 U.S. basins (Scientific Data, 2026).
+        language: Python
+        project: /projects/5_basingrid/
+      - name: watershed-agnostic-streamflow-estimation
+        title: Watershed-agnostic streamflow
+        description: Explainable, distributed CNN–LSTM hydrologic model (Environmental Modelling & Software, 2026).
+        language: Jupyter
+        project: /projects/6_watershed_agnostic/
+      - name: GraphRivers
+        description: Graph neural networks over river networks for distributed streamflow prediction.
+        language: Python
+        project: /projects/2_gnn_streamflow/
+      - name: CONUS_Data_Download
+        title: CONUS data download
+        description: Continental-scale data acquisition for foundation-model training.
+        language: Python
+  - title: Earlier work
+    repos:
+      - name: TransferableArchitectureForObjectDetection
+        title: Transferable visual inspection
+        description: Transfer-learning architecture for scalable visual quality inspection (ICAI 2022).
+        language: Jupyter
+        project: /projects/8_visual_inspection/
+      - name: Detectron2_Tutorials
+        description: Tutorials for configuring and training Detectron2 object-detection models.
+        language: Python

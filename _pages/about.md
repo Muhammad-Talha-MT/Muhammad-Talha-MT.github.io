@@ -1,40 +1,17 @@
 ---
-layout: about
-title: about
+layout: home
 permalink: /
-subtitle: >
-  Machine Learning for Hydrology, Earth Systems, and Scientific Discovery
+title: Muhammad Talha
+body_class: home
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false
-  more_info: >
-    <p>Michigan State University</p>
-    <p>East Lansing, Michigan</p>
-
-selected_papers: true
-social: true
-
-announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
-
-latest_posts:
-  enabled: false
+now: Now at Oak Ridge National Laboratory, building HydroORBIT
+roles:
+  - Ph.D. Candidate, Michigan State University
+  - Research Intern, Oak Ridge National Laboratory
 ---
-I am a dual-major Ph.D. candidate in **Computer Science** and **Biosystems and Agricultural Engineering** at [Michigan State University](https://msu.edu/), advised by Dr. Amirpouyan Nejadhashemi and Dr. Pang-Ning Tan. My research develops scalable machine-learning methods for hydrology and Earth systems, with a focus on **spatiotemporal representation learning**, **streamflow prediction**, and **generalization to ungauged basins**.  I am broadly interested in **AI for science**, foundation models, multimodal learning, scientific time-series forecasting, and interpretable AI.
 
+I am a dual-major Ph.D. candidate in **Computer Science** and **Biosystems and Agricultural Engineering** at [Michigan State University](https://msu.edu/), advised by [Dr. Amirpouyan Nejadhashemi](https://www.egr.msu.edu/people/profile/pouyan) and [Dr. Pang-Ning Tan](https://www.cse.msu.edu/~ptan/). I develop foundation models, graph neural networks, and spatiotemporal transformers for hydrologic prediction, including in places where no river gauge exists.
 
+I am currently a Research Intern at [Oak Ridge National Laboratory](https://www.ornl.gov/) through the Graduate Research Opportunity (GRO) Program, working with [Dr. Dan Lu](https://www.ornl.gov/staff-profile/dan-lu). There I contribute to **[HydroORBIT](https://www.ornl.gov/project/ai-foundation-model-development-water-forecasting)**, a Genesis Mission–funded multimodal foundation model for continental-scale hydrologic prediction, and build graph neural networks for distributed streamflow prediction.
 
-## Research interests
-
-- Machine learning for hydrology and environmental science
-- Spatiotemporal representation learning
-- Scientific and geospatial foundation models
-- Self-supervised and multimodal learning
-- Computer vision and remote sensing
-- Scientific time-series forecasting
-- Interpretable artificial intelligence
-- Optimization for environmental decision-making
+My dissertation, _Spatially Distributed Basin Representations for Hydrologic Prediction Across Space and Time_, asks how to learn representations of river basins from distributed meteorological and landscape data that transfer to new places and new time periods.

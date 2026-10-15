@@ -1,0 +1,10 @@
+{%- assign items = site.news | sort: 'date' | reverse -%}
+{%- assign lim = include.limit | default: 1000 -%}
+<ol class="news-list">
+  {% for n in items limit: lim %}
+    <li class="news-item">
+      <time datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: '%b %Y' }}</time>
+      <div class="news-text">{{ n.content | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+    </li>
+  {% endfor %}
+</ol>

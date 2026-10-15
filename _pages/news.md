@@ -1,7 +1,8 @@
 ---
-layout: page
-title: news
 permalink: /news/
+title: News
+eyebrow: News
+description: Papers, datasets, and milestones.
 ---
 
-{% include news.liquid %}
+{% include news-list.liquid %}

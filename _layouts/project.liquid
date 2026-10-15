@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<article class="project">
+  <header class="page-hero project-hero">
+    <div class="wrap project-hero-grid{% unless page.image %} project-hero-grid--text{% endunless %}">
+      <div>
+        <a class="back-link" href="{{ '/projects/' | relative_url }}">{% include icon.liquid name="arrow-left" %}All research</a>
+        <div class="project-meta">
+          <p class="section-kicker">{{ page.org }} · {{ page.period }}</p>
+          {% if page.status -%}
+            <span class="status-badge status--{{ page.status | slugify }}">{{ page.status }}</span>
+          {%- endif %}
+        </div>
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="page-lede">{{ page.description }}</p>
+        {% if page.tags %}
+          <ul class="tag-list">
+            {% for t in page.tags %}
+              <li>{{ t }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if page.links %}
+          <div class="btn-row">
+            {% for l in page.links %}
+              <a class="btn {% if forloop.first %}btn-primary{% else %}btn-ghost{% endif %}" href="{{ l.url }}">
+                {%- include icon.liquid name=l.icon -%}
+                {{ l.label }}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      {% if page.image %}
+        <figure class="project-hero-figure">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+          {% if page.image_credit %}
+            <figcaption>
+              {%- if page.image_credit_url -%}
+                <a href="{{ page.image_credit_url }}">{{ page.image_credit }}</a>
+              {%- else -%}
+                {{ page.image_credit }}
+              {%- endif -%}
+            </figcaption>
+          {% endif %}
+        </figure>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="wrap project-layout">
+    <div class="prose project-body">
+      {{ content }}
+    </div>
+
+    {% for f in page.figures %}
+      <figure class="project-figure">
+        <img src="{{ f.src | relative_url }}" alt="" loading="lazy">
+        <figcaption>
+          <span class="mono">Figure {{ forloop.index }}.</span> {{ f.caption }}
+        </figcaption>
+      </figure>
+    {% endfor %}
+
+    {% if page.publications %}
+      <section class="project-pubs" aria-labelledby="project-pubs-title">
+        <h2 class="section-label" id="project-pubs-title">Publications</h2>
+        <div class="pubs">
+          {% for key in page.publications %}
+            {% bibliography --query @*[key={{ key }}] --group_by none %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+
+    {% assign others = site.projects | where_exp: 'p', 'p.url != page.url' | where: 'category', page.category | sort: 'importance' %}
+    {% if others.size > 0 %}
+      <section class="project-more" aria-labelledby="project-more-title">
+        <h2 class="section-label" id="project-more-title">Related work</h2>
+        <div class="project-grid">
+          {% for p in others limit: 3 %}
+            {% include project-card.liquid project=p %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
+  </div>
+</article>

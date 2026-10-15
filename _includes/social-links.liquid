@@ -1,0 +1,43 @@
+{%- assign s = site.data.socials -%}
+<ul class="social-links{% if include.class %} {{ include.class }}{% endif %}">
+  {% if s.email %}
+    <li>
+      <a href="mailto:{{ s.email }}" aria-label="Email">
+        {%- include icon.liquid name="mail" -%}
+        <span>Email</span></a
+      >
+    </li>
+  {% endif %}
+  {% if s.scholar_userid %}
+    <li>
+      <a href="https://scholar.google.com/citations?user={{ s.scholar_userid }}" aria-label="Google Scholar">
+        {%- include icon.liquid name="scholar" -%}
+        <span>Scholar</span></a
+      >
+    </li>
+  {% endif %}
+  {% if s.github_username %}
+    <li>
+      <a href="https://github.com/{{ s.github_username }}" aria-label="GitHub">
+        {%- include icon.liquid name="github" -%}
+        <span>GitHub</span></a
+      >
+    </li>
+  {% endif %}
+  {% if s.linkedin_username %}
+    <li>
+      <a href="https://www.linkedin.com/in/{{ s.linkedin_username }}" aria-label="LinkedIn">
+        {%- include icon.liquid name="linkedin" -%}
+        <span>LinkedIn</span></a
+      >
+    </li>
+  {% endif %}
+  {% if s.orcid_id %}
+    <li>
+      <a href="https://orcid.org/{{ s.orcid_id }}" aria-label="ORCID">
+        {%- include icon.liquid name="orcid" -%}
+        <span>ORCID</span></a
+      >
+    </li>
+  {% endif %}
+</ul>

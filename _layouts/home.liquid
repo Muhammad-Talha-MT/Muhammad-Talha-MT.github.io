@@ -1,0 +1,122 @@
+---
+layout: default
+---
+<section class="hero profile-hero" aria-labelledby="profile-name">
+  <div class="hero-map" aria-hidden="true">
+    <img src="{{ '/assets/img/research/hero-conus-rivers.jpg' | relative_url }}" alt="" fetchpriority="high">
+  </div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap profile-grid">
+    <div class="profile-text">
+      <p class="now-pill reveal">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>{{ page.now }}</span>
+      </p>
+      <h1 id="profile-name" class="profile-name reveal">{{ site.author.name }}</h1>
+      <p class="profile-role reveal">
+        {% for line in page.roles %}
+          <span>{{ line }}</span>
+        {% endfor %}
+      </p>
+      <div class="prose profile-bio reveal">{{ content }}</div>
+      <div class="profile-actions reveal">
+        <a class="btn btn-primary" href="{{ site.author.cv_pdf | relative_url }}">{% include icon.liquid name="download" %}CV</a>
+        {% include social-links.liquid class="social-links--pills" %}
+      </div>
+    </div>
+    <figure class="portrait reveal">
+      <img
+        src="{{ site.author.photo | relative_url }}"
+        alt="Portrait of Muhammad Talha"
+        width="1448"
+        height="1086"
+        fetchpriority="high"
+      >
+      <figcaption>
+        {% include icon.liquid name="pin" -%}
+        {{- site.author.location }}
+      </figcaption>
+    </figure>
+  </div>
+  <p class="hero-caption" aria-hidden="true">
+    Background: every stream and basin in the contiguous U.S., highlighted by HUC-2 region, from my Basin2Vec analysis.
+  </p>
+</section>
+
+<section class="section section--first" aria-label="News and selected publications">
+  <div class="wrap split">
+    <div class="split-side">
+      <header class="section-head section-head--row">
+        <div>
+          <p class="section-kicker">News</p>
+          <h2 class="section-title">Recently</h2>
+        </div>
+        <a class="more-link" href="{{ '/news/' | relative_url }}">All news {% include icon.liquid name="arrow-right" %}</a>
+      </header>
+      {% include news-list.liquid limit=6 %}
+    </div>
+    <div class="split-main">
+      <header class="section-head section-head--row">
+        <div>
+          <p class="section-kicker">Publications</p>
+          <h2 class="section-title">Selected papers</h2>
+        </div>
+        <a class="more-link" href="{{ '/publications/' | relative_url }}">All publications {% include icon.liquid name="arrow-right" %}</a>
+      </header>
+      <div class="pubs pubs--compact">
+        {% bibliography --query @*[selected=true]* --group_by none %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="research" aria-labelledby="research-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="section-kicker">Research interests</p>
+      <h2 class="section-title" id="research-title">What I work on</h2>
+      <p class="section-lede">
+        Most rivers on Earth have no gauge. I build models that learn from the places we do measure and carry that knowledge to the places we don't.
+      </p>
+    </header>
+    <div class="theme-grid">
+      {% for t in site.data.research.themes %}
+        <article class="theme reveal">
+          <div class="theme-body">
+            <p class="theme-num">{{ t.num }}</p>
+            <h3 class="theme-title">{{ t.title }}</h3>
+            <p class="theme-text">{{ t.text }}</p>
+            <ul class="theme-links">
+              {% for l in t.projects %}
+                <li>
+                  <a href="{{ l.url | relative_url }}">
+                    {{- l.title -}}
+                    {%- include icon.liquid name="arrow-right" -%}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <header class="section-head section-head--row">
+      <div>
+        <p class="section-kicker">Selected work</p>
+        <h2 class="section-title" id="work-title">Projects</h2>
+      </div>
+      <a class="more-link" href="{{ '/projects/' | relative_url }}">All projects {% include icon.liquid name="arrow-right" %}</a>
+    </header>
+    {% assign featured = site.projects | where_exp: 'p', 'p.featured' | sort: 'featured' %}
+    <div class="project-grid project-grid--featured">
+      {% for p in featured %}
+        {% include project-card.liquid project=p %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

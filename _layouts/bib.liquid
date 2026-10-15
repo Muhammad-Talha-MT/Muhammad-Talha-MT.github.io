@@ -1,0 +1,97 @@
+---
+---
+{%- comment -%}
+  jekyll-scholar renders every BibTeX entry through this template.
+  Kind is used by the filters on the publications page.
+{%- endcomment -%}
+{%- assign note = entry.note | default: '' -%}
+{%- if note contains 'Under review' -%}
+  {%- assign kind = 'review' -%}
+  {%- assign kind_label = 'Under review' -%}
+{%- elsif entry.type == 'article' -%}
+  {%- assign kind = 'journal' -%}
+  {%- assign kind_label = 'Journal' -%}
+{%- else -%}
+  {%- assign kind = 'conference' -%}
+  {%- assign kind_label = 'Conference' -%}
+{%- endif -%}
+{%- assign link = entry.html | default: entry.url -%}
+{%- if entry.google_scholar_id -%}
+  {%- assign cite_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id -%}
+  {%- assign cites = site.data.citations.papers[cite_key].citations -%}
+{%- else -%}
+  {%- assign cites = null -%}
+{%- endif -%}
+<article class="pub pub--{{ kind }}" data-kind="{{ kind }}" id="{{ entry.key }}">
+  <div class="pub-badge">
+    <span class="pub-abbr">{{ entry.abbr | default: kind_label }}</span>
+    <span class="pub-kind">{{ kind_label }}</span>
+  </div>
+  <div class="pub-main">
+    <h3 class="pub-title">
+      {%- if link -%}
+        <a href="{{ link }}">{{ entry.title }}</a>
+      {%- else -%}
+        {{ entry.title }}
+      {%- endif -%}
+    </h3>
+    <p class="pub-authors">
+      {%- for a in entry.author_array -%}
+        {%- assign full = a.first | append: ' ' | append: a.last -%}
+        {%- if a.last == 'Talha' and a.first contains 'Muhammad' -%}
+          <strong class="me">{{ full }}</strong>
+        {%- else -%}
+          {{ full }}
+        {%- endif -%}
+        {%- unless forloop.last -%}
+          {%- if forloop.length == 2 %} and {% elsif forloop.rindex == 2 %}, and {% else %}, {% endif -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    </p>
+    <p class="pub-venue">
+      {%- if kind == 'review' -%}
+        {{ note | remove: 'Under review, ' }}
+      {%- elsif entry.type == 'article' -%}
+        <em>{{ entry.journal }}</em>
+        {%- if entry.volume %}, {{ entry.volume }}{% endif -%}
+        {%- if entry.number %}({{ entry.number }}){% endif -%}
+        {%- if entry.pages %}, {{ entry.pages | replace: '--', '–' }}{% endif -%}
+      {%- else -%}
+        <em>{{ entry.booktitle }}</em>
+        {%- if entry.pages %}, pp. {{ entry.pages | replace: '--', '–' }}{% endif -%}
+      {%- endif -%}
+      <span class="pub-year"> · {{ entry.year }}</span>
+    </p>
+    <div class="pub-actions">
+      {%- if link -%}
+        <a class="chip" href="{{ link }}">
+          {%- include icon.liquid name="doc" -%}
+          {%- if entry.doi %}DOI{% else %}Paper{% endif -%}
+        </a>
+      {%- endif -%}
+      {%- if entry.pdf -%}
+        <a class="chip" href="{{ entry.pdf | relative_url }}">{% include icon.liquid name="download" %}PDF</a>
+      {%- endif -%}
+      {%- if entry.code -%}
+        <a class="chip" href="{{ entry.code }}">{% include icon.liquid name="code" %}Code</a>
+      {%- endif -%}
+      <button class="chip" type="button" data-bibtex-toggle aria-expanded="false" aria-controls="bib-{{ entry.key }}">
+        {%- include icon.liquid name="braces" -%}
+        BibTeX
+      </button>
+      {%- if cites and cites > 0 -%}
+        <a class="chip chip--quiet" href="https://scholar.google.com/citations?view_op=view_citation&amp;citation_for_view={{ cite_key }}">
+          {%- include icon.liquid name="quote" -%}
+          {{ cites }} citation{% if cites != 1 %}s{% endif %}
+        </a>
+      {%- endif -%}
+    </div>
+    <div class="bibtex" id="bib-{{ entry.key }}" hidden>
+      <button class="bibtex-copy" type="button" data-bibtex-copy>
+        {% include icon.liquid name="copy" -%}
+        <span>Copy</span>
+      </button>
+      <pre><code>{{ entry.bibtex | xml_escape }}</code></pre>
+    </div>
+  </div>
+</article>
