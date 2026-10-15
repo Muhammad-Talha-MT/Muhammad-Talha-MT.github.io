@@ -1,0 +1,78 @@
+# Favorites shown on the "Beyond research" page.
+# A section appears only when it has at least one entry.
+#
+# Poetry: lines_ur / lines_roman are what is displayed. translation and note are optional.
+# Faiz's work is still under copyright, so for him only a couplet (or just the opening line) is shown.
+
+poetry:
+  - poet: Faiz Ahmad Faiz
+    form: Ghazal
+    lines_ur:
+      - نہیں نگاہ میں منزل تو جستجو ہی سہی
+      - نہیں وصال میسر تو آرزو ہی سہی
+    lines_roman:
+      - Nahin nigah mein manzil to justuju hi sahi
+      - Nahin visaal muyassar to arzoo hi sahi
+    translation: If the destination is not in sight, then the search will do. If union is out of reach, then longing will do.
+    url: https://www.rekhta.org/ghazals/nahiin-nigaah-men-manzil-to-justujuu-hii-sahii-faiz-ahmad-faiz-ghazals?lang=ur
+
+  - poet: Faiz Ahmad Faiz
+    form: Ghazal
+    lines_ur:
+      - آئے کچھ ابر کچھ شراب آئے
+    lines_roman:
+      - Aaye kuchh abr kuchh sharaab aaye
+    translation: Let some clouds come, let some wine come.
+    url: https://www.rekhta.org/ghazals/aae-kuchh-abr-kuchh-sharaab-aae-faiz-ahmad-faiz-ghazals?lang=ur
+
+  - poet: Faiz Ahmad Faiz
+    form: Nazm
+    lines_ur:
+      - مجھ سے پہلی سی محبت مری محبوب نہ مانگ
+    lines_roman:
+      - Mujh se pehli si mohabbat meri mehboob na maang
+    translation: My beloved, do not ask me for the love I once gave you.
+    url: https://www.rekhta.org/nazms/mujh-se-pahlii-sii-mohabbat-mirii-mahbuub-na-maang-mujh-se-pahlii-sii-mohabbat-mirii-mahbuub-na-maang-faiz-ahmad-faiz-nazms?lang=ur
+
+  - poet: Mirza Ghalib
+    form: Ghazal
+    lines_ur:
+      - شبنم بہ گل لالہ نہ خالی ز ادا ہے
+      - داغ دل بے درد نظر گاہ حیا ہے
+    lines_roman:
+      - Shabnam ba gul-e-lala na khali z-ada hai
+      - Daagh-e-dil be-dard nazar-gah-e-haya hai
+    url: https://www.rekhta.org/ghazals/shabnam-ba-gul-e-laala-na-khaalii-z-adaa-hai-mirza-ghalib-ghazals?lang=ur
+
+  - poet: Mirza Ghalib
+    form: Ghazal
+    lines_ur:
+      - نکتہ چیں ہے غم دل اس کو سنائے نہ بنے
+      - کیا بنے بات جہاں بات بنائے نہ بنے
+    lines_roman:
+      - Nukta-cheen hai gham-e-dil us ko sunaae na bane
+      - Kya bane baat jahaan baat banaae na bane
+    url: https://www.rekhta.org/ghazals/nukta-chiin-hai-gam-e-dil-us-ko-sunaae-na-bane-mirza-ghalib-ghazals?lang=ur
+
+songs:
+  - title: Nisar Mein
+    artist: Abida Parveen
+    url: https://www.youtube.com/watch?v=lyOOXyv4ve0
+
+  - title: Nahin Nigah Mein Manzil
+    artist: Abida Parveen
+    from: Faiz's ghazal
+    url: https://www.youtube.com/watch?v=xHcwdHC8ETA
+
+  - title: Aaj Bazar Mein
+    artist: Quratulain Balouch × QB
+    from: Live jam
+    url: https://www.youtube.com/watch?v=EFMeKv9AoS4
+
+# Add movies like this:
+#   - title: Movie name
+#     year: 2010
+#     director: Name
+#     note: Why I love it   (optional)
+#     url: https://...      (optional)
+movies: []

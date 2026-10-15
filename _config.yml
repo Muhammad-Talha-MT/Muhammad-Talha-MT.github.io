@@ -33,6 +33,8 @@ nav:
     url: /news/
   - title: CV
     url: /cv/
+  - title: Beyond research
+    url: /beyond/
 
 # jekyll-seo-tag
 social:
