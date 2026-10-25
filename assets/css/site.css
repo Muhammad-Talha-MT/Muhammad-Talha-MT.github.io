@@ -662,6 +662,34 @@ a:hover .more-link .icon {
   text-align: right;
 }
 
+.basin2vec-feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+}
+
+.basin2vec-feature-card .section-title {
+  margin-top: 0.5rem;
+}
+
+.basin2vec-feature-card .section-lede {
+  margin-top: 0.65rem;
+}
+
+@media (max-width: 40rem) {
+  .basin2vec-feature-card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}
+
 .hero-veil {
   position: absolute;
   inset: 0;
