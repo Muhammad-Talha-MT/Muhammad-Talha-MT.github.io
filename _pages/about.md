@@ -4,7 +4,7 @@ permalink: /
 title: Muhammad Talha
 body_class: home
 
-now: Now at Oak Ridge National Laboratory, building HydroORBIT
+now: Now at Oak Ridge National Laboratory
 roles:
   - Ph.D. Candidate, Michigan State University
   - Research Intern, Oak Ridge National Laboratory
