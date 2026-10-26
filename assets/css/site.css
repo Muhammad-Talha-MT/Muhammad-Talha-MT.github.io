@@ -663,7 +663,9 @@ a:hover .more-link .icon {
 }
 
 .basin2vec-feature {
-  padding-block: 0.75rem;
+  padding-block: 0.5rem;
+  background: none;
+  border-block: 0;
 }
 
 .basin2vec-feature .wrap {
@@ -672,7 +674,7 @@ a:hover .more-link .icon {
 }
 
 .basin2vec-feature + .section {
-  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
 }
 
 .basin2vec-feature-card {
