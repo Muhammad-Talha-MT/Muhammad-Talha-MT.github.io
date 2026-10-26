@@ -46,19 +46,43 @@ layout: default
 <section class="section section--tint basin2vec-feature" aria-labelledby="basin2vec-feature-title">
   <div class="wrap">
     <div class="basin2vec-feature-card">
-      <div>
-        <p class="section-kicker">Featured project</p>
-        <h2 class="section-title" id="basin2vec-feature-title">Basin2Vec</h2>
-        <p class="section-lede">
-          Explore how river basins share learned signatures in our WACV 2027 paper and interactive project page.
-        </p>
+      <div class="b2v-head">
+        <div>
+          <p class="section-kicker">Featured project</p>
+          <h2 class="section-title" id="basin2vec-feature-title">Basin2Vec</h2>
+          <p class="section-lede">
+            Explore how river basins share learned signatures in our WACV 2027 paper and interactive project page.
+          </p>
+        </div>
+        <div class="b2v-actions">
+          <button class="btn btn-primary" type="button" data-b2v-open>
+            Expand live preview {% include icon.liquid name="arrow-right" %}
+          </button>
+          <a class="btn" href="{{ '/basin2vec/' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
       </div>
-      <a class="btn btn-primary" href="{{ '/basin2vec/' | relative_url }}">
-        Explore Basin2Vec {% include icon.liquid name="arrow-right" %}
-      </a>
+      <div class="b2v-browser" data-b2v-preview>
+        <div class="b2v-bar" aria-hidden="true">
+          <span class="b2v-dots"><i></i><i></i><i></i></span>
+          <span class="b2v-url">muhammad-talha-mt.github.io/basin2vec</span>
+        </div>
+        <button class="b2v-viewport" type="button" data-b2v-open aria-label="Expand the Basin2Vec project page">
+          <iframe class="b2v-frame" src="{{ '/basin2vec/' | relative_url }}" title="Basin2Vec project page preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+          <span class="b2v-hint">Click to expand</span>
+        </button>
+      </div>
     </div>
   </div>
 </section>
+
+<dialog class="b2v-dialog" data-b2v-dialog aria-label="Basin2Vec project page">
+  <div class="b2v-dialog-bar">
+    <strong>Basin2Vec</strong>
+    <a href="{{ '/basin2vec/' | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
+    <button class="btn" type="button" data-b2v-close>Close</button>
+  </div>
+  <iframe class="b2v-dialog-frame" data-src="{{ '/basin2vec/' | relative_url }}" title="Basin2Vec project page"></iframe>
+</dialog>
 
 <section class="section section--first" aria-label="News and selected publications">
   <div class="wrap split">
