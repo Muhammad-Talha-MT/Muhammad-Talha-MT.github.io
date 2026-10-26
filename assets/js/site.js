@@ -201,4 +201,34 @@
       })
       .catch(function () {});
   }
+
+  /* ---------- Basin2Vec live preview ---------- */
+
+  var b2vPreview = document.querySelector("[data-b2v-preview]");
+  var b2vDialog = document.querySelector("[data-b2v-dialog]");
+  if (b2vPreview && b2vDialog && b2vDialog.showModal) {
+    var b2vFrame = b2vDialog.querySelector("iframe");
+    var fitPreview = function () {
+      b2vPreview.style.setProperty("--b2v-scale", (b2vPreview.clientWidth / 1280).toFixed(4));
+    };
+    fitPreview();
+    window.addEventListener("resize", fitPreview);
+
+    document.querySelectorAll("[data-b2v-open]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (!b2vFrame.getAttribute("src")) b2vFrame.setAttribute("src", b2vFrame.dataset.src);
+        b2vDialog.showModal();
+        document.body.style.overflow = "hidden";
+      });
+    });
+    b2vDialog.querySelector("[data-b2v-close]").addEventListener("click", function () {
+      b2vDialog.close();
+    });
+    b2vDialog.addEventListener("click", function (e) {
+      if (e.target === b2vDialog) b2vDialog.close();
+    });
+    b2vDialog.addEventListener("close", function () {
+      document.body.style.overflow = "";
+    });
+  }
 })();
