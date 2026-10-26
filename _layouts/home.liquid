@@ -111,39 +111,6 @@ layout: default
   </div>
 </section>
 
-<section class="section section--tint" id="research" aria-labelledby="research-title">
-  <div class="wrap">
-    <header class="section-head">
-      <p class="section-kicker">Research interests</p>
-      <h2 class="section-title" id="research-title">What I work on</h2>
-      <p class="section-lede">
-        Most rivers on Earth have no gauge. I build models that learn from the places we do measure and carry that knowledge to the places we don't.
-      </p>
-    </header>
-    <div class="theme-grid">
-      {% for t in site.data.research.themes %}
-        <article class="theme reveal">
-          <div class="theme-body">
-            <p class="theme-num">{{ t.num }}</p>
-            <h3 class="theme-title">{{ t.title }}</h3>
-            <p class="theme-text">{{ t.text }}</p>
-            <ul class="theme-links">
-              {% for l in t.projects %}
-                <li>
-                  <a href="{{ l.url | relative_url }}">
-                    {{- l.title -}}
-                    {%- include icon.liquid name="arrow-right" -%}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <section class="section" id="work" aria-labelledby="work-title">
   <div class="wrap">
     <header class="section-head section-head--row">

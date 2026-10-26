@@ -10,7 +10,7 @@ roles:
   - Research Intern, Oak Ridge National Laboratory
 ---
 
-I am a dual-major Ph.D. candidate in **Computer Science** and **Biosystems and Agricultural Engineering** at [Michigan State University](https://msu.edu/), advised by [Dr. Amirpouyan Nejadhashemi](https://www.egr.msu.edu/people/profile/pouyan) and [Dr. Pang-Ning Tan](https://www.cse.msu.edu/~ptan/). I develop foundation models, graph neural networks, and spatiotemporal transformers for hydrologic prediction, including in places where no river gauge exists.
+I am a dual-major Ph.D. candidate in **Computer Science** and **Biosystems and Agricultural Engineering** at [Michigan State University](https://msu.edu/), advised by [Dr. Amirpouyan Nejadhashemi](https://www.egr.msu.edu/people/profile/pouyan) and [Dr. Pang-Ning Tan](https://www.cse.msu.edu/~ptan/). Most rivers on Earth have no gauge, so my research asks how models can learn from the places we do measure and carry that knowledge to the places we don't. I work on **foundation models for Earth systems**, **graph neural networks on river networks**, **spatiotemporal deep learning** (transformers and CNN–LSTMs on gridded inputs), and **transferable basin representations** for hydrologic prediction.
 
 I am currently a Research Intern at [Oak Ridge National Laboratory](https://www.ornl.gov/) through the Graduate Research Opportunity (GRO) Program, working with [Dr. Dan Lu](https://www.ornl.gov/staff-profile/dan-lu). There I contribute to **[HydroORBIT](https://www.ornl.gov/project/ai-foundation-model-development-water-forecasting)**, a Genesis Mission–funded multimodal foundation model for continental-scale hydrologic prediction, and build graph neural networks for distributed streamflow prediction.
 
