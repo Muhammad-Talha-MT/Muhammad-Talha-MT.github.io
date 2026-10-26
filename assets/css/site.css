@@ -667,7 +667,8 @@ a:hover .more-link .icon {
 }
 
 .basin2vec-feature .wrap {
-  max-width: 88rem;
+  max-width: none;
+  padding-inline: clamp(0.75rem, 1.5vw, 1.5rem);
 }
 
 .basin2vec-feature + .section {
