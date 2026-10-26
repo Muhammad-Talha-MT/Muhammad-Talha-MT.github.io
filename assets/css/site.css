@@ -662,11 +662,15 @@ a:hover .more-link .icon {
   text-align: right;
 }
 
+.basin2vec-feature {
+  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .basin2vec-feature-card {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  padding: clamp(1.5rem, 4vw, 2.5rem);
+  gap: 1.1rem;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent);
   border-radius: var(--radius);
@@ -687,11 +691,11 @@ a:hover .more-link .icon {
 }
 
 .basin2vec-feature-card .section-title {
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
 }
 
 .basin2vec-feature-card .section-lede {
-  margin-top: 0.65rem;
+  margin-top: 0.4rem;
 }
 
 .b2v-browser {
@@ -749,7 +753,7 @@ a:hover .more-link .icon {
   position: relative;
   display: block;
   width: 100%;
-  height: calc(800px * var(--b2v-scale));
+  height: calc(640px * var(--b2v-scale));
   padding: 0;
   border: 0;
   background: var(--bg-elev);
