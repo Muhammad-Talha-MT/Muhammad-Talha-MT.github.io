@@ -666,6 +666,10 @@ a:hover .more-link .icon {
   padding-block: clamp(1.5rem, 3vw, 2.5rem);
 }
 
+.basin2vec-feature + .section {
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
 .basin2vec-feature-card {
   display: flex;
   flex-direction: column;
