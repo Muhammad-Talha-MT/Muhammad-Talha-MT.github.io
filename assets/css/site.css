@@ -663,7 +663,11 @@ a:hover .more-link .icon {
 }
 
 .basin2vec-feature {
-  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+  padding-block: 0.75rem;
+}
+
+.basin2vec-feature .wrap {
+  max-width: 88rem;
 }
 
 .basin2vec-feature + .section {
@@ -672,10 +676,10 @@ a:hover .more-link .icon {
 
 .basin2vec-feature-card {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   align-items: center;
   gap: clamp(1.25rem, 3vw, 2.25rem);
-  padding: clamp(1rem, 2.5vw, 1.5rem);
+  padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent);
   border-radius: var(--radius);
