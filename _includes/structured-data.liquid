@@ -1,0 +1,60 @@
+{%- comment -%}
+  Extra JSON-LD for search engines (jekyll-seo-tag already emits WebSite/WebPage/BlogPosting).
+  Home: a Person entity so searches for the name connect the site, GitHub, LinkedIn, ORCID and Scholar.
+  Project pages: the research project, linked back to the person.
+{%- endcomment -%}
+{%- assign site_root = site.url | append: site.baseurl -%}
+{%- assign scholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.socials.scholar_userid -%}
+{%- if page.url == '/' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "{{ site_root }}/#person",
+    "name": "{{ site.author.name }}",
+    "givenName": "Muhammad",
+    "familyName": "Talha",
+    "url": "{{ site_root }}/",
+    "image": "{{ site.author.photo | absolute_url }}",
+    "jobTitle": "Ph.D. Candidate and Research Intern",
+    "description": {{ site.description | strip | jsonify }},
+    "affiliation": [
+      { "@type": "CollegeOrUniversity", "name": "Michigan State University", "url": "https://msu.edu/" },
+      { "@type": "Organization", "name": "Oak Ridge National Laboratory", "url": "https://www.ornl.gov/" }
+    ],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Engineering and Technology, Lahore" },
+    "workLocation": { "@type": "Place", "name": "{{ site.author.location }}" },
+    "knowsAbout": [
+      "Hydrology", "Streamflow prediction", "Ungauged basins", "Foundation models for Earth systems",
+      "Graph neural networks", "Spatiotemporal deep learning", "Machine learning for Earth science"
+    ],
+    "sameAs": [
+      "https://github.com/Muhammad-Talha-MT",
+      "https://www.linkedin.com/in/mt-muhammad-talha",
+      "https://orcid.org/{{ site.data.socials.orcid_id }}",
+      "{{ scholar_url }}"
+    ]
+  }
+}
+</script>
+{%- elsif page.collection == 'projects' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchProject",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": "{{ page.url | absolute_url }}",
+  {%- if page.image %}
+  "image": "{{ page.image | absolute_url }}",
+  {%- endif %}
+  {%- if page.tags %}
+  "keywords": {{ page.tags | join: ', ' | jsonify }},
+  {%- endif %}
+  "sponsor": { "@type": "Organization", "name": {{ page.org | jsonify }} },
+  "founder": { "@type": "Person", "@id": "{{ site_root }}/#person", "name": "{{ site.author.name }}", "url": "{{ site_root }}/" }
+}
+</script>
+{%- endif -%}

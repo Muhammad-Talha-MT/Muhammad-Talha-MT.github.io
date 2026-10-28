@@ -29,6 +29,9 @@
       >&copy; {{ site.time | date: '%Y' }}
       {{ site.author.name -}}
     </span>
+    {% if site.analytics.goatcounter and site.analytics.goatcounter != '' %}
+      <span>Anonymous, cookie-free visit counts</span>
+    {% endif %}
     <span>Last updated {{ site.time | date: '%B %-d, %Y' }}</span>
   </div>
 </footer>

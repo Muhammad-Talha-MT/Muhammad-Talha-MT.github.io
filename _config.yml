@@ -3,11 +3,10 @@
 # -----------------------------------------------------------------------------
 
 title: Muhammad Talha
-tagline: AI for Earth-system prediction
+tagline: AI for hydrology and Earth-system prediction
 description: >-
-  Muhammad Talha is a Ph.D. candidate at Michigan State University and a research intern at
-  Oak Ridge National Laboratory, building multimodal foundation models, graph neural networks,
-  and spatiotemporal transformers for hydrologic prediction.
+  Muhammad Talha is a Michigan State Ph.D. candidate and Oak Ridge National Laboratory research
+  intern studying AI for hydrologic prediction.
 url: "https://muhammad-talha-mt.github.io"
 baseurl: ""
 lang: en
@@ -43,6 +42,16 @@ social:
     - https://github.com/Muhammad-Talha-MT
     - https://www.linkedin.com/in/mt-muhammad-talha
     - https://orcid.org/0000-0001-5096-544X
+
+# Search engine verification. Paste the token from Google Search Console / Bing Webmaster Tools
+# (the content value of the verification meta tag), then rebuild.
+# webmaster_verifications:
+#   google: "your-token"
+#   bing: "your-token"
+
+# Visit counts (GoatCounter). Put your site code here, e.g. "mtalha" for https://mtalha.goatcounter.com
+analytics:
+  goatcounter: ""
 
 # -----------------------------------------------------------------------------
 # Content

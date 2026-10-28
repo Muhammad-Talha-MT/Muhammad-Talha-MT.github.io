@@ -2,6 +2,7 @@
 layout: home
 permalink: /
 title: Muhammad Talha
+image: /assets/img/research/hero-conus-rivers.jpg
 body_class: home
 
 now: Now at Oak Ridge National Laboratory
